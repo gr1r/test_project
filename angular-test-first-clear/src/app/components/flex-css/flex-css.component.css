@@ -1,0 +1,29 @@
+:host {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;  
+}
+
+
+
+button[mat-raised-button]:nth-child(odd) {
+    align-self: flex-start;
+}
+
+button[mat-raised-button]:nth-child(even) {
+    align-self: flex-end;
+}
+
+@media (min-width: 599px) {
+    :host {
+        flex-direction: row;    
+    }
+    button[mat-raised-button]:nth-child(odd) {
+        align-self: flex-end;
+    }
+    
+    button[mat-raised-button]:nth-child(even) {
+        align-self: flex-start;
+    }
+}
